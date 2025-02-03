@@ -1,1 +1,35 @@
+name: Deploy Jekyll Portfolio
 
+on:
+  push:
+    branches:
+      - main  #
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.2' 
+          bundler-cache: true
+
+      - name: Install Bundler
+        run: gem install bundler -v 2.4.22
+
+      - name: Install Jekyll Dependencies
+        run: bundle install
+
+      - name: Build Jekyll Site
+        run: bundle exec jekyll build  
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GH_TOKEN  }}  
+          publish_branch: gh-pages 
+          publish_dir: ./_site 
