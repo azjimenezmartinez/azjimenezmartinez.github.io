@@ -19,15 +19,26 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Azucena Jimenez's Portfolio 
+subtitle: CPSC 549-70
 email: azucenaljim1@csu.fullerton.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://azjimenezmartinez.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  azjimenezmartinez
+
+#About Me 
+about_me:  |
+  Hello! I'm Azucena, but you can call me Susy. I am currently a graduate student in M.S. Applied Computer Science with experience in supervised machine learning. 
+  My work includes published research on Non-Invasive Pre-Diabetes, Type 1, and Type 2 Diabetes Screening, 
+  as well as Early Detection of At-Risk Students Using Machine Learning. 
+  I have developed proficiency in Python and applied it to create predictive models with strong results.
+  I am particularly interested in expanding my skill set by learning both front-end and back-end web development. 
+  My goal is to build a deeper understanding of web technologies and gain hands-on experience in full-stack development, 
+  combining my technical background with new web design and development skills.
 
 # Build settings
 theme: minima
